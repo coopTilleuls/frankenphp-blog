@@ -1,0 +1,19 @@
+name: CD
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+
+  build:
+    name: Build
+    uses: ./.github/workflows/build.yaml
+    with:
+      tags: |
+        type=ref,event=branch
+        type=ref,event=pr
+        type=ref,event=tag
+        type=semver,pattern={{version}}
+        type=semver,pattern={{major}}.{{minor}}
+        type=sha
