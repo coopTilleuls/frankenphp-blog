@@ -4,9 +4,9 @@ framework:
 
     # Note that the session will be started ONLY if you read or write from it.
     session: true
-    trusted_proxies: '%env(TRUSTED_PROXIES)%'
-    trusted_headers: [ "x-forwarded-for", "x-forwarded-proto", "x-forwarded-host", "x-forwarded-port", "x-forwarded-prefix" ]
-    trusted_hosts: '%env(TRUSTED_HOSTS)%'
+    # trusted_proxies: '%env(TRUSTED_PROXIES)%'
+    # trusted_headers: [ "x-forwarded-for", "x-forwarded-proto", "x-forwarded-host", "x-forwarded-port", "x-forwarded-prefix" ]
+    # trusted_hosts: '%env(TRUSTED_HOSTS)%'
     #esi: true
     #fragments: true
 
